@@ -12,7 +12,7 @@ module.exports = {
 
     defaultConfiguration: {
 
-        params: ['--force', 'default'],
+        params: ['default'],
 
         onError: function(data){
             console.log('GRUNT ERROR: ' + data);
@@ -22,7 +22,7 @@ module.exports = {
             console.log('GRUNT: ' + data);
         },
 
-        onClose = function(data){
+        onClose: function(data){
             console.log('CLOSING GRUNT');
         }
     },
