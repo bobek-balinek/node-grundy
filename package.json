@@ -1,0 +1,15 @@
+{
+  "name": "grundy",
+  "version": "0.0.1",
+  "description": "Node module to spawn grunt tasks and keep control of them",
+  "main": "grundy.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "https://github.com/bobek-balinek/node-grundy",
+  "author": "Przemyslaw Bobak",
+  "license": "BSD",
+  "dependencies": {
+    "underscore": "~1.4.4"
+  }
+}
