@@ -1,7 +1,7 @@
 
 /*
-* Grunt Setup
-*/
+ * Grundy v0.0.1
+ */
 
 var childProcess  = require('child_process');
 var _ = require('underscore');
@@ -28,14 +28,9 @@ module.exports = {
     },
 
     mergeOptions: function(options){
-
-        // If a string or an array of strings given, treat as a parameter
         if(_.isString(options) || _.isArray(options)){
             this.defaultConfiguration.params.push(options);
-        }
-
-        // Otherwise overwrite default configuration
-        if(_.isObject(options)){
+        }else if(_.isObject(options)){
             for (var key in options) {
                 this.defaultConfiguration.params[key] = options[key];
             };
@@ -54,7 +49,6 @@ module.exports = {
 
     spawn: function(options){
         this.mergeOptions(options);
-
         this.spawnGrunt();
         this.addListeners();
     },
